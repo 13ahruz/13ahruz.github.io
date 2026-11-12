@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign-in complete – Bahruz Shabili Publisher</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">B</div>
+  <a href="index.html">Bahruz Shabili</a>
+</header>
+<main>
+  <h1 id="h">Sign-in complete</h1>
+  <p id="msg">You can return to Bahruz Shabili Publisher on your computer.</p>
+  <div class="card" id="box" hidden>
+    <p style="margin-top:0">Copy this code back into the Publisher window:</p>
+    <p><code id="code" style="word-break:break-all;font-size:15px"></code></p>
+    <button id="copy" style="font:inherit;padding:8px 16px;border-radius:10px;border:0;background:var(--accent);color:#fff;font-weight:700;cursor:pointer">Copy</button>
+  </div>
+</main>
+<script>
+  const q = new URLSearchParams(location.search);
+  const code = q.get("code"), err = q.get("error");
+  if (err) { document.getElementById("h").textContent = "Sign-in was not completed"; document.getElementById("msg").textContent = q.get("error_description") || err; }
+  else if (code) {
+    // Hand the code to the local Publisher if it is listening; otherwise show it for copy/paste.
+    fetch("http://127.0.0.1:8765/callback?code=" + encodeURIComponent(code) + "&state=" + encodeURIComponent(q.get("state") || ""), {mode: "no-cors"}).catch(() => {});
+    document.getElementById("box").hidden = false;
+    document.getElementById("code").textContent = code;
+    document.getElementById("copy").onclick = () => navigator.clipboard.writeText(code);
+  }
+</script>
+</body>
+</html>
