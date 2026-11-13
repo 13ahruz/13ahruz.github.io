@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Удаление аккаунта Avtosh: Baku Drift</title>
+<link rel="icon" href="../icon.png">
+<link rel="alternate" hreflang="en" href="https://13ahruz.github.io/baku-drift/delete-account.html">
+<link rel="alternate" hreflang="az" href="https://13ahruz.github.io/baku-drift/az/delete-account.html">
+<link rel="alternate" hreflang="ru" href="https://13ahruz.github.io/baku-drift/ru/delete-account.html">
+<link rel="alternate" hreflang="tr" href="https://13ahruz.github.io/baku-drift/tr/delete-account.html">
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #e8eaf0; background: #11131b; margin: 0; }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 20px 64px; }
+  nav.langs { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; margin-bottom: 18px; }
+  nav.langs a { padding: 4px 10px; border-radius: 999px; border: 1px solid #2a2e3c; color: #c9cedb; text-decoration: none; font-size: 14px; }
+  nav.langs a.on { background: #ff8a3d; border-color: #ff8a3d; color: #11131b; font-weight: 600; }
+  nav.pages { display: flex; flex-wrap: wrap; gap: 14px; margin: 6px 0 22px; font-size: 15px; }
+  header { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
+  header img { width: 88px; height: 88px; border-radius: 20px; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin-top: 28px; color: #ff8a3d; }
+  .muted { color: #9aa1b4; margin: 2px 0 0; }
+  a { color: #ff8a3d; }
+  li { margin: 4px 0; }
+  dt { font-weight: 600; margin-top: 14px; }
+  dd { margin: 4px 0 0; }
+</style>
+
+</head>
+<body>
+<main>
+<nav class="langs"><a href="../delete-account.html" data-lang="en" hreflang="en">English</a><a href="../az/delete-account.html" data-lang="az" hreflang="az">Azərbaycanca</a><a href="../ru/delete-account.html" data-lang="ru" hreflang="ru" class="on">Русский</a><a href="../tr/delete-account.html" data-lang="tr" hreflang="tr">Türkçe</a></nav>
+<nav class="pages"><a href="../ru/index.html">Поддержка</a><a href="../ru/privacy.html">Конфиденциальность</a><a href="../ru/delete-account.html">Удаление аккаунта</a></nav>
+<h1>Удаление аккаунта Avtosh: Baku Drift</h1><p class="muted">Avtosh: Baku Drift — Бахруз Шабили</p>
+<h2>В игре (сразу)</h2>
+<ol><li>Откройте игру и нажмите <b>Настройки</b>.</li><li>Откройте вкладку <b>Аккаунт</b> и нажмите <b>Удалить аккаунт</b>.</li><li>Подтвердите. Если вы входили давно, игра попросит ещё раз подтвердить пароль, Apple или Google.</li></ol>
+<p>Аккаунт удаляется сразу.</p>
+<h2>Без игры</h2>
+<p>Если игры у вас больше нет, напишите на <a href="mailto:bahruzshabili@gmail.com?subject=Delete%20my%20Avtosh%20account">bahruzshabili@gmail.com</a> с адреса, привязанного к аккаунту (при входе через Apple или Google — с адреса этого аккаунта), и укажите имя пользователя. Мы удалим аккаунт в течение 7 дней и ответим, когда всё будет готово.</p>
+<h2>Что удаляется</h2>
+<ul><li>Имя пользователя и идентификатор аккаунта</li><li>E-mail и хеш пароля, а также привязки Apple и Google (связь со входом через Apple отзывается и на стороне Apple)</li><li>Сохранённый прогресс и настройки на нашем сервере</li><li>Список друзей, заявки в друзья, блокировки, недавние игроки, а также ваши жалобы и жалобы на вас</li><li>Все сеансы входа и коды</li></ul>
+<p>Ничего не сохраняется. Остаются только обычные веб-журналы сервера (IP-адрес и время) — они автоматически удаляются в течение 14 дней. Удаление аккаунта в игре также очищает прогресс на этом телефоне.</p>
+</main>
+<script>
+document.querySelectorAll('nav.langs a').forEach(function (a) {
+  a.addEventListener('click', function () { try { localStorage.setItem('avtosh.lang', a.dataset.lang); } catch (e) {} });
+});
+</script>
+</body>
+</html>
